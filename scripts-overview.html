@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio & Chiptune Scripts Overview</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #24292f;
+      background-color: #f6f8fa;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      border-bottom: 1px solid #d0d7de;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #0969da;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #d0d7de;
+    }
+    th {
+      background-color: #f6f8fa;
+      font-weight: 600;
+    }
+    code {
+      background-color: #afb8c133;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Audio &amp; Chiptune Script Breakdown</h1>
+  <p>Comparison of the 11 Python scripts based on their naming conventions and audio-processing roles.</p>
+
+  <h2>1. General Audio Ripping &amp; Splitting</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Script Name</th>
+        <th>Primary Role</th>
+        <th>Key Difference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>audio_ripper.py</code></td>
+        <td>Base Audio Extractor</td>
+        <td>Standard script for ripping or extracting raw audio tracks from a source.</td>
+      </tr>
+      <tr>
+        <td><code>audio_rippxc.py</code></td>
+        <td>Extended / Custom Ripper</td>
+        <td>Variant of the base ripper (likely handles custom formats, extra channels, or an extended codec).</td>
+      </tr>
+      <tr>
+        <td><code>audio_splitter.py</code></td>
+        <td>Track / Stem Divider</td>
+        <td>Splits an existing audio file into smaller segments, timestamps, or individual channels rather than ripping.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Bass-Focused Tools</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Script Name</th>
+        <th>Primary Role</th>
+        <th>Key Difference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>bassyripper.py</code></td>
+        <td>Bass-Boosted / Low-End Ripper</td>
+        <td>Extracts audio while isolating or emphasizing low-end bass frequencies.</td>
+      </tr>
+      <tr>
+        <td><code>bassymusicconverter.py</code></td>
+        <td>Full-Track Bass Converter</td>
+        <td>Converts complete music files while applying bass enhancement or low-frequency tuning.</td>
+      </tr>
+      <tr>
+        <td><code>bassyloopconverter.py</code></td>
+        <td>Seamless Loop Bass Converter</td>
+        <td>Specifically tailored for short audio loops, preserving loop points while converting bass properties.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Chiptune &amp; Retro Synth Converters</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Script Name</th>
+        <th>Primary Role</th>
+        <th>Key Difference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>chipcrunchconverter.py</code></td>
+        <td>Bitcrusher / Lo-Fi Chiptune</td>
+        <td>Applies heavy bit-depth reduction or sample-rate crunch for a gritty retro sound.</td>
+      </tr>
+      <tr>
+        <td><code>unaliaserchiptuneconverter.py</code></td>
+        <td>Anti-Aliased Chiptune</td>
+        <td>Converts audio to chiptune style while smoothing out harsh aliasing artifacts and high-frequency distortion.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. "Specia" FX Series (Progressive Versions)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Script Name</th>
+        <th>Primary Role</th>
+        <th>Key Difference</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>speciaconverter.py</code></td>
+        <td>Base Special Converter</td>
+        <td>The original or baseline version of the custom conversion algorithm.</td>
+      </tr>
+      <tr>
+        <td><code>speciaFXconverter.py</code></td>
+        <td>Special Effects Variant</td>
+        <td>Adds custom audio effects (FX) processing on top of the base converter.</td>
+      </tr>
+      <tr>
+        <td><code>speciaFXXconverter.py</code></td>
+        <td>Heavy / Extended FX Variant</td>
+        <td>An intensified or second-generation revision of the FX converter with stronger or extra effect chains.</td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+</html>
