@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Evolution — From Byte Unmasker to Audio Suite</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-purple: #bc8cff;
+            --accent-pink: #f778ba;
+            --accent-green: #3fb950;
+            --code-bg: #010409;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 1.5rem;
+            background: linear-gradient(145deg, #161b22 0%, #0d1117 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(247, 120, 186, 0.15);
+            color: var(--accent-pink);
+            border: 1px solid rgba(247, 120, 186, 0.4);
+            padding: 0.25rem 0.85rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 2.15rem;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(90deg, #f778ba, #bc8cff, #58a6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+            color: var(--text-primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .variant-card {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.25rem;
+        }
+
+        .variant-card h3 {
+            font-size: 1.05rem;
+            color: var(--accent-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .variant-card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 0;
+        }
+
+        .milestone-box {
+            background-color: rgba(188, 140, 255, 0.08);
+            border-left: 4px solid var(--accent-purple);
+            padding: 1.1rem 1.35rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .final-box {
+            background-color: rgba(63, 185, 80, 0.08);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.1rem 1.35rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+        }
+
+        code {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: var(--code-bg);
+            padding: 0.2rem 0.45rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: var(--accent-pink);
+            border: 1px solid var(--border-color);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="badge">Project Evolution</div>
+        <h1>How a Simple Unpacker Became an Audio Playground</h1>
+        <p class="subtitle">What started as a mission to unlock stubborn binary files evolved into custom sound mods, distorted loops, and a drag-and-drop converter.</p>
+    </header>
+
+    <section>
+        <h2>Humble Beginnings: Just Making the Data Readable</h2>
+        <p>
+            Originally, this extension had one singular goal: uncover raw audio data that refused to be read. Those packed 3D Gamestudio <code>.dat</code> archives kept their soundtracks locked behind inverted bytes, and all I wanted was a way to flip the bits back so media players could actually recognize the tracks.
+        </p>
+        <div class="milestone-box">
+            Once the core bitwise unlocking worked and those clean <code>.ogg</code> and <code>.wav</code> streams finally poured out, stopping there felt like only half the fun.
+        </div>
+    </section>
+
+    <section>
+        <h2>Branching Out: Custom Builds &amp; Audio Experiments</h2>
+        <p>
+            With direct access to the raw audio streams and extraction pipeline, I began building multiple variations of the extension—turning a basic ripper into a hands-on audio toolkit:
+        </p>
+
+        <div class="grid">
+            <div class="variant-card">
+                <h3>Bassy &amp; Louder Editions</h3>
+                <p>Custom-tuned variants engineered to boost low-end punch and push overall volume levels right during processing.</p>
+            </div>
+
+            <div class="variant-card">
+                <h3>Distorted Loops</h3>
+                <p>Experimental builds designed to warp, overdrive, and loop extracted game tracks into gritty, heavy remixes.</p>
+            </div>
+
+            <div class="variant-card">
+                <h3>Drag-and-Drop Converter</h3>
+                <p>An automated converter utility where simply dragging audio tracks straight onto the tool converts them effortlessly on the fly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>More Than Originally Aimed For</h2>
+        <p>
+            Looking back, it is wild to see how far the project stretched beyond its initial blueprint. What began out of necessity—just trying to pry open unreadable game files—snowballed into an entire collection of audio utilities, creative sound experiments, and effortless file converters.
+        </p>
+        <div class="final-box">
+            <strong>The Takeaway:</strong> Sometimes cracking open a single stubborn file format opens the door to building tools you never even planned on making in the first place.
+        </div>
+    </section>
+
+    <footer>
+        From raw hex and bitwise math to custom audio tools — built out of curiosity and love for game soundtracks.
+    </footer>
+</div>
+
+</body>
+</html>
